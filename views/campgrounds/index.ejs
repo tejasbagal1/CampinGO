@@ -15,7 +15,10 @@
                         <img class="card-img-top" src="<%= camp.img %>" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"><%= camp.name %></h5>
-                            <p class="card-text"><%= camp.desc %></p>
+                            <p style="white-space: nowrap;
+                            width: 250px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;" class="card-text"><%= camp.desc %></p>
                             <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">View More</a>
                             <!-- in the above line  -->
                         </div>
