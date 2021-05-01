@@ -42,14 +42,14 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-    background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+    background-image: url(http://i.imgur.com/emvhOnb.jpg) 
   }
   .slideshow li:nth-child(2) { 
     background-image: url(http://i.imgur.com/SBEmFpv.jpg);
     animation-delay: 10s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(http://i.imgur.com/emvhOnb.jpg);
+    background-image: url(http://i.imgur.com/K3mPv14.jpg);
     animation-delay: 20s; 
   }
   .slideshow li:nth-child(4) { 

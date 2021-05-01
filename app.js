@@ -8,7 +8,7 @@ var Campground = require("./models/campground");
 var Comment = require("./models/comments");
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/yelp_camp_V10", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect("mongodb+srv://Tejas:Nightfurry@521@cluster0.umxxm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 
 app.use(express.static(__dirname+"/public"));
 
@@ -59,9 +59,14 @@ app.use(commentRoutes);
 app.use(authRoutes);
 
 
-app.listen(3000, function(req,res){
-    console.log("server started at port 3000: ");
-})
+// app.listen(3000, function(req,res){
+//     console.log("server started at port 3000: ");
+// })
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log('listening ' + port);
+});
 
 //take the example in SHOW section
 //we want to render the info associated to that id and we find that id
