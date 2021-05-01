@@ -1,0 +1,13 @@
+body{
+    /* background-color: rgb(235, 239, 245); */
+    padding-top: 70px;
+}
+.card{
+    background-color: rgb(235, 239, 245);
+}
+.formAsButton{
+    display: inline;
+}
+#commentContainer{
+    padding-top: 40px;
+}

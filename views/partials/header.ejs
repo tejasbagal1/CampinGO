@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yelp Camp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">CampinGO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Contact</a>
+                </div>
+                <ul class="nav navbar-nav  ml-auto"> <!--to put items in right side-->
+                 <% if(!currentUser){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                 <% }else{ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Signed In As : <%= currentUser.username %></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                 <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- always remember that error is always an array -->
+
+    <div class="container">
+        <% if(successAlert && successAlert.length > 0){ %>  
+        <div class="alert alert-success" role="alert">
+            <%= successAlert %>
+        </div>
+        <% } %>
+        <% if(errorAlert && errorAlert.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= errorAlert %>
+        </div>
+        <% } %>
+    </div>
+   
+
+<!-- A very IMPORTANT note for this page-->
+<!-- we include this partial template on top of every file so don't consider  -->
+<!-- it as a different file, the key thing here is that this template is generalised -->
+<!-- but it is a part of code of the file in which it is included -->
+<!-- so...whenever u pass some object to any file where this template is included -->
+<!-- that object can be used here too in embaded JS. -->

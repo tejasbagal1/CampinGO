@@ -1,0 +1,20 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+    <h1>Register Here....</h1>
+    <div style="width:50%; margin: 20px auto;">
+        <form action="/register" method="post">
+            <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="User-Name">
+            </div>
+            <div class="form-group">
+            <input type="password" class="form-control" name="password"  placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        <a href="/">Go to Home</a>
+    </div>
+</div>
+
+
+<%- include("../partials/footer.ejs") %>

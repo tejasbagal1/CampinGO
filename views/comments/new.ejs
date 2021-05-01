@@ -1,0 +1,19 @@
+<%- include("../partials/header.ejs") %>
+<!-- this is the new of Comments -->
+<div class="container">
+    <h1>Add new Comment to <%= campground.name %></h1>
+    <div style="width:50%; margin: 20px auto;">
+        <form action="/campgrounds/<%= campground._id %>/comments" method="post">
+            <!-- <div class="form-group">
+            <input type="text" class="form-control" name="comment[author]" placeholder="Your sweet Name">
+            </div> -->
+            <div class="form-group">
+            <input type="text" class="form-control" name="comment[text]"  placeholder="Type your comment here">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <a href="/campgrounds/<%= campground._id %>">See Comments</a>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

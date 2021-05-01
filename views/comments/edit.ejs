@@ -1,0 +1,16 @@
+<%- include("../partials/header.ejs") %>
+<!-- this is the edit of Comments -->
+<div class="container">
+    <h1>Edit Your Comment!</h1>
+    <div style="width:50%; margin: 20px auto;">
+        <form action="/campgrounds/<%=C_id%>/comments/<%= comment._id %>?_method=PUT" method="post">
+            <div class="form-group">
+            <input type="text" class="form-control" name="comment[text]"  value="<%= comment.text%>">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <a href="/campgrounds/<%=C_id%>">See Comments</a>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>
