@@ -4,6 +4,7 @@
   "description": "this is best camping site",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jony",
@@ -22,3 +23,5 @@
     "request": "^2.88.2"
   }
 }
+
+
